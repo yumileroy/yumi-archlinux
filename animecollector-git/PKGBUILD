@@ -1,0 +1,42 @@
+# Contributor: Yumi Nanako <yumileroy@yahoo.com>
+
+pkgname=animecollector-git
+pkgver=20090611
+pkgrel=1
+pkgdesc="A updater for MyAnimelist"
+url="http://myanimelist.net/clubs.php?cid=10642"
+arch=('i686' 'x86_64')
+license=('GPL')
+depends=('python' 'pygtk' 'beautiful-soup')
+makedepends=('git')
+conflicts=()
+replaces=()
+backup=()
+install=()
+source=(http://nanaforge.info/patches/0001-Trying-to-fix-error-when-running-anichou.py-by-just-.patch)
+md5sums=('5f008aae7ff90b44a292283446d66e04')
+
+_gitroot="git://github.com/skriticos/ac.git"
+_gitname="ac"
+
+build() {
+  cd ${srcdir}
+  msg "Connecting to github.com/skriticos GIT server...."
+
+  if [ -d ${srcdir}/$_gitname ] ; then
+  cd $_gitname && git pull origin
+  msg "The local files are updated."
+  else
+  git clone $_gitroot
+  fi
+
+  msg "GIT checkout done or server timeout"
+  msg "Starting installing..."
+
+  git clone $_gitname $_gitname-build
+  cd ${srcdir}/$_gitname-build
+  git apply < ${startdir}/src/0001-Trying-to-fix-error-when-running-anichou.py-by-just-.patch
+  python setup.py install --root=$startdir/pkg
+
+} 
+

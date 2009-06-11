@@ -1,0 +1,25 @@
+From b77c22e73f0da827c5c21647e3e34eb2b700f90b Mon Sep 17 00:00:00 2001
+From: yumileroy <yumileroy@yahoo.com>
+Date: Thu, 11 Jun 2009 23:21:26 +0800
+Subject: [PATCH] Trying to fix error when running anichou.py by just importing BeautifulSoup
+
+---
+ src/AniChou/myanimelist.py |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/src/AniChou/myanimelist.py b/src/AniChou/myanimelist.py
+index f70c18e..af12488 100644
+--- a/src/AniChou/myanimelist.py
++++ b/src/AniChou/myanimelist.py
+@@ -14,7 +14,7 @@ import urllib
+ import urllib2
+ from cookielib import LWPCookieJar
+ import socket
+-from lib.beautifulsoup import BeautifulSoup
++import BeautifulSoup
+ import re
+ import urlparse
+ from datetime import date, datetime
+-- 
+1.6.3.2
+
