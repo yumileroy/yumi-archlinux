@@ -1,0 +1,7 @@
+# new package version
+post_install() {
+  	cat <<-EndOfMessage
+	NOTE: Place your lic file in:	
+		/home/<USERNAME>/.ActiveState/
+	EndOfMessage
+}
