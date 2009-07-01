@@ -1,7 +1,7 @@
 # Contributor: Yumi Nanako <yumileroy@yahoo.com>
 
 pkgname=animecollector-git
-pkgver=20090611
+pkgver=20090701
 pkgrel=1
 pkgdesc="A updater for MyAnimelist"
 url="http://myanimelist.net/clubs.php?cid=10642"

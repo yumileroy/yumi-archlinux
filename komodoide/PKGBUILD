@@ -17,6 +17,7 @@ arch=(i686 x86_64)
 url="http://www.activestate.com/komodo/"
 license=('Proprietary')
 depends=('python')
+install=komodoide.install
 
 source=("http://downloads.activestate.com/Komodo/releases/${_major}/Komodo-IDE-${_major}-${_minor}-linux-libcpp6-${_arch}.tar.gz")
 
