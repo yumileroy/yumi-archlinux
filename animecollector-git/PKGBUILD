@@ -7,7 +7,7 @@ pkgdesc="A updater for MyAnimelist"
 url="http://myanimelist.net/clubs.php?cid=10642"
 arch=('i686' 'x86_64')
 license=('GPL')
-depends=('python' 'pygtk' 'beautiful-soup')
+depends=('lsof' 'python' 'pygtk' 'beautiful-soup')
 makedepends=('git')
 conflicts=()
 replaces=()
