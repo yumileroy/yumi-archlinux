@@ -37,7 +37,8 @@ build() {
   git clone $_gitname $_gitname-build
   cd ${srcdir}/$_gitname-build
   git apply < ${startdir}/src/0001-Trying-to-fix-error-when-running-anichou.py-by-just-.patch
-  python setup.py install --root=$startdir/pkg
+#  sed -i 's|from lib.beautifulsoup ||g' src/AniChou/myanimelist.py
+  python setup.py install --root=$startdir/pkg || return 1
   install -D -m 644 ${startdir}/anichou.desktop ${startdir}/pkg/usr/share/applications/anichou.desktop
 
 } 
