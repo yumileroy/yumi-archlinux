@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Anichou
+GenericName=Anichou
+Comment=AniChou - Open anime/manga updater for myanimelist.net
+Terminal=false
+Type=Application
+MimeType=text/plain;
+Categories=Anichou;Application;Anime;Manga;Updater;myanimelist.net;MAL;AC;
+Exec=anichou.py
+Icon=/usr/lib/python2.6/site-packages/AniChou/data/acbt.png
